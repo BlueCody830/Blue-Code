@@ -276,9 +276,9 @@ footer {
   }
 }
 
-/* REMOVE BLUE TAP / FOCUS SQUARES */
+/* REMOVE TAP / FOCUS SQUARES COMPLETELY */
 * {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 a,
@@ -296,6 +296,6 @@ button:focus-visible,
 .btn:focus,
 .btn:active,
 .btn:focus-visible {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
