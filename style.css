@@ -289,3 +289,32 @@ footer {
     font-size: 1.25rem;
   }
 }
+
+a,
+button,
+.btn {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  outline: none;
+  box-shadow: none;
+}
+
+a:focus,
+a:active,
+a:visited,
+button:focus,
+button:active,
+.btn:focus,
+.btn:active {
+  outline: none;
+  box-shadow: none;
+  background-color: inherit;
+}
+
+.btn.primary:active {
+  background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+.btn.secondary:active {
+  background: rgba(255, 255, 255, 0.08);
+}
