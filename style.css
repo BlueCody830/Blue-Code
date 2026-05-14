@@ -275,3 +275,27 @@ footer {
     font-size: 1.25rem;
   }
 }
+
+/* REMOVE BLUE TAP / FOCUS SQUARES */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+.btn,
+input,
+textarea,
+select,
+a:focus,
+a:active,
+a:focus-visible,
+button:focus,
+button:active,
+button:focus-visible,
+.btn:focus,
+.btn:active,
+.btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
