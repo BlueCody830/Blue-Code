@@ -20,11 +20,46 @@
   </header>
 
   <main class="page-container">
-    <section class="page-title">
-      <h1>Contact</h1>
-      <p>This page is ready for your contact information later.</p>
-    </section>
-  </main>
+
+  <section class="page-title">
+    <h1>Contact</h1>
+    <p>Send me a message and I’ll get back to you.</p>
+  </section>
+
+  <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST" class="contact-form">
+
+    <input type="text" name="fullName" placeholder="Full Name" required>
+
+    <input type="email" name="email" placeholder="Gmail or Email" required>
+
+    <div class="phone-row">
+      <select name="countryCode" required>
+        <option value="+1">🇺🇸 +1</option>
+        <option value="+52">🇲🇽 +52</option>
+        <option value="+53">🇨🇺 +53</option>
+        <option value="+57">🇨🇴 +57</option>
+        <option value="+58">🇻🇪 +58</option>
+        <option value="+34">🇪🇸 +34</option>
+      </select>
+
+      <input 
+        type="tel" 
+        name="phone" 
+        placeholder="Phone number"
+        pattern="[0-9]{7,15}"
+        required
+      >
+    </div>
+
+    <textarea name="message" placeholder="Write your message..." required></textarea>
+
+    <button type="submit" class="btn primary">
+      Send Message
+    </button>
+
+  </form>
+
+</main>
 
   <footer>
     <p>© 2026 Blue<span style="color:#3b82f6;">+</span>Code. All rights reserved.</p>
