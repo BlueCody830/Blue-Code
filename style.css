@@ -299,3 +299,53 @@ button:focus-visible,
   outline: none !important;
   box-shadow: none !important;
 }
+
+/*Contact form*/
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  background: rgba(15, 23, 42, 0.75);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input:invalid {
+  border-color: #ef4444;
+}
+
+.phone-row {
+  display: flex;
+  gap: 12px;
+}
+
+.phone-row select {
+  max-width: 130px;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+@media (max-width: 600px) {
+  .phone-row {
+    flex-direction: column;
+  }
+
+  .phone-row select {
+    max-width: 100%;
+  }
+}
