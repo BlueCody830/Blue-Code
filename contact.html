@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blue+Code</title>
+  <title>Blue+Code | Contact</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <nav class="navbar">
-      <a href="index.html" class="logo">Blue<span style="color:#3b82f6;">+</span>Code</a>
+      <a href="index.html" class="logo">
+        Blue<span style="color:#3b82f6;">+</span>Code
+      </a>
+
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
@@ -20,42 +24,60 @@
   </header>
 
   <main class="page-container">
+    <section class="page-title">
+      <h1>Contact</h1>
+      <p>Send me a message and I’ll get back to you.</p>
+    </section>
 
-  <section class="page-title">
-    <h1>Contact</h1>
-    <p>Send me a message and I’ll get back to you.</p>
-  </section>
-
-  <form action="https://formspree.io/f/mlgzyyog" method="POST" class="contact-form">
-
-    <input type="text" name="fullName" placeholder="Full Name" required>
-
-    <input type="email" name="email" placeholder="Gmail or Email" required>
-
-    <div class="phone-row">
-      <select name="countryCode" required>
-  <option value="+1">🇺🇸 United States +1</option>
-  <option value="+52">🇲🇽 Mexico +52</option>
-</select>
-
+    <form action="https://formspree.io/f/mlgzyyog" method="POST" class="contact-form">
       <input 
-        type="tel" 
-        name="phone" 
-        placeholder="Phone number"
-        pattern="[0-9]{7,15}"
+        type="text" 
+        name="fullName" 
+        placeholder="Full Name" 
+        autocomplete="name"
         required
       >
-    </div>
 
-    <textarea name="message" placeholder="Write your message..." required></textarea>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Gmail or Email" 
+        autocomplete="email"
+        required
+      >
 
-    <button type="submit" class="btn primary">
-      Send Message
-    </button>
+      <div class="phone-row">
+        <select name="countryCode" required>
+          <option value="+1">🇺🇸 United States +1</option>
+          <option value="+52">🇲🇽 Mexico +52</option>
+        </select>
 
-  </form>
+        <input 
+          type="tel" 
+          name="phone" 
+          placeholder="Phone number"
+          inputmode="numeric"
+          pattern="[0-9]{7,15}"
+          title="Enter only numbers. Minimum 7 digits and maximum 15 digits."
+          autocomplete="tel"
+          required
+        >
+      </div>
 
-</main>
+      <textarea 
+        name="message" 
+        placeholder="Write your message..." 
+        minlength="5"
+        required
+      ></textarea>
+
+      <input type="hidden" name="_subject" value="New message from Blue+Code website">
+
+      <button type="submit" class="btn primary">
+        Send Message
+      </button>
+    </form>
+  </main>
 
   <footer>
     <p>© 2026 Blue<span style="color:#3b82f6;">+</span>Code. All rights reserved.</p>
